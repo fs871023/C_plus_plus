@@ -1,0 +1,10 @@
+all:hw1.out
+
+hw1.out:hw1.o
+	g++ -o hw1.out hw1.o
+
+hw1.o:hw1.cpp
+	g++ -c hw1.cpp
+	
+clean:
+	rm -f hw1.o hw1.out

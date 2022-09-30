@@ -1,0 +1,16 @@
+all:hw2_1.out
+
+CC=g++
+OBJ=Avg.o AvgP.o AvgN.o largest.o
+
+hw2_1.out:hw2_1.o $(OBJ)
+	$(CC) -o $@ hw2_1.o $(OBJ)
+
+%.o:%.cpp 
+	$(CC) $< $@ -c
+
+clean:
+	rm -f *.o  hw2_1.out 
+
+
+
